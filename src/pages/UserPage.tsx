@@ -24,7 +24,7 @@ export const UsersPage: FC = () => {
   const isLoaded = useSelector(selectIsLoaded);
 
   useEffect(() => {
-    dispatch(fetchUsers() as unknown as AnyAction);
+    dispatch(fetchUsers() as AnyAction);
   }, [dispatch]);
 
   const handleFilterChange = (e: ChangeEvent<HTMLInputElement>) => {

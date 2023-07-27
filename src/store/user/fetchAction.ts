@@ -1,11 +1,6 @@
-import { Action } from 'redux';
-import { ThunkAction } from 'redux-thunk';
+import { Dispatch } from 'redux';
 
-import { RootState } from 'store/types';
-
-export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;
-
-export const fetchUsers = (): AppThunk<void> => async (dispatch) => {
+export const fetchUsers = (): unknown => async (dispatch: Dispatch) => {
   dispatch({ type: 'SET_LOADED', payload: true });
   try {
     const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
