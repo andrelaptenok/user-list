@@ -64,7 +64,7 @@ export const usersReducer = (state = initialState, action: AnyAction) => {
         ...state,
         filter: '',
         users: state.users,
-        deletedUser:[],
+        deletedUser: [],
         filteredUsers: state.users,
       };
 
