@@ -8,9 +8,9 @@ import styles from './UserItem.module.scss';
 
 interface UserListItemProps {
   user: User;
+  filter: string;
   onDeleteUser: (id: number) => void;
   onOpenModal: (user: User) => void;
-  filter?: string;
 }
 
 export const UserItem: React.FC<UserListItemProps> = ({ user, onDeleteUser, onOpenModal, filter = '' }) => {
@@ -25,14 +25,12 @@ export const UserItem: React.FC<UserListItemProps> = ({ user, onDeleteUser, onOp
   return (
     <div className={styles.card}>
       <div className={styles.card__item} onClick={handleOpenModal}>
-        <div>
-          <h3 dangerouslySetInnerHTML={{ __html: highlightMatch(user.name, filter) }} />
-          <p
-            dangerouslySetInnerHTML={{ __html: highlightMatch(user.username, filter) }}
-            className={styles.card__item__username}
-          />
-          <p dangerouslySetInnerHTML={{ __html: highlightMatch(user.email, filter) }} />
-        </div>
+        <h3 dangerouslySetInnerHTML={{ __html: highlightMatch(user.name, filter) }} />
+        <p
+          dangerouslySetInnerHTML={{ __html: highlightMatch(user.username, filter) }}
+          className={styles.card__item__username}
+        />
+        <p dangerouslySetInnerHTML={{ __html: highlightMatch(user.email, filter) }} />
       </div>
       <Button
         size="small"

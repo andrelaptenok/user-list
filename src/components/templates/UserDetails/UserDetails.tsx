@@ -11,15 +11,17 @@ interface Props {
 
 export const UserDetails: FC<Props> = ({ title, userDetails }) => {
   return (
-    <>
-      <h3 className={styles.details__header}>{title}:</h3>
+    <div className={styles.details}>
+      <h3>{title}:</h3>
       <ul className={styles.details__list}>
         {userDetails?.map(({ name, title }) => (
           <li key={name}>
-            {name}: <span>{title}</span>
+            <p>
+              {name}: <span>{title}</span>
+            </p>
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };

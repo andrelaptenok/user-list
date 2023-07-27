@@ -3,8 +3,6 @@
   cursor: pointer;
 
   &__item {
-    display: flex;
-    justify-content: space-between;
     background-color: var(--white);
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -15,30 +13,25 @@
       margin: 10px 0;
       font-size: 14px;
       font-style: italic;
-      font-weight: var(--font-weight-medium);
+      font-weight: var(--font-weight-bold);
       color: var(--grey);
+    }
+
+    p, h3 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
   }
 
   &__button {
     position: absolute;
-    top: 12px;
+    top: calc(50% - 20px);
     right: 20px;
     padding: 20px;
   }
 
-  li {
-    list-style-type: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-
-    p, h3 {
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
-  &:hover{
+  &:hover {
     box-shadow: 0 8px 16px var(--black-alpha-005);
     transform: translateY(-1px);
   }
