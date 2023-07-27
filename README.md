@@ -15,12 +15,10 @@ Application for displaying user information
 - Fix errors and warnings than can be automatically fixed. Run fix:js and fix:css in parallel.
   #### yarn fix
 
-## Launching the project
-
-* So that the application works properly set up local env file (.env)
-  The file contains env variables for local application.
-  The .env file should contain following variables:
+## Project setup
 
 ```
-API_URL=API_URL
-
+git clone https://github.com/andrelaptenok/user-list.git
+yarn install
+yarn start
+```
