@@ -1,0 +1,41 @@
+.card {
+  position: relative;
+  cursor: pointer;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px 90px 20px 20px;
+    margin-bottom: 10px;
+
+    &__username {
+      margin: 10px 0;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: var(--font-weight-medium);
+      color: var(--grey);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    padding: 20px;
+  }
+
+  li {
+    list-style-type: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    p, h3 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}

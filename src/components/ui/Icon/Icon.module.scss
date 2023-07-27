@@ -1,0 +1,13 @@
+.icon {
+  line-height: 0;
+
+  &-cursor {
+    &__default {
+      cursor: default;
+    }
+
+    &__pointer {
+      cursor: pointer;
+    }
+  }
+}

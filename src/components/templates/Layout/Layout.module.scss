@@ -1,0 +1,38 @@
+.layout {
+  margin: 0 20px 20px;
+
+  &__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--green);
+    padding: 20px;
+    z-index: 1;
+
+    &__border {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 1px;
+        left: 0;
+        right: 0;
+        background-color: var(--light-white);
+      }
+    }
+  }
+
+  &__main {
+    display: block;
+    overflow-x: hidden;
+    padding-top: 120px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+  }
+
+  &__modal {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
