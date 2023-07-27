@@ -38,4 +38,8 @@
       overflow: hidden;
     }
   }
+  &:hover{
+    box-shadow: 0 8px 16px var(--black-alpha-005);
+    transform: translateY(-2px);
+  }
 }
